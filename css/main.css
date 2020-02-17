@@ -102,3 +102,13 @@ tbody tr:nth-child(2n) {
 tbody tr:nth-child(2n + 1) {
   background-color: #e3f2fd;
 }
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  color: lightslategrey;
+  font-weight: lighter;
+  font-size: 12px;
+}
