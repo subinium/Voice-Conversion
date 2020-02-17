@@ -1,0 +1,19 @@
+# Site settings
+title: Voice Conversion
+
+email: "subinium@gmail.com"
+url: "http://subinium.github.io"
+github_url: "http://github.com/subinium/IML"
+github_profile: "http://github.com/subinium"
+baseurl: "/Voice-Conversion"
+
+exclude:
+  - README.md
+  - _site
+  
+highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

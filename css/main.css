@@ -1,0 +1,90 @@
+* {
+  font-family: "Noto Sans KR", "Times New Roman", Times, serif;
+}
+
+.page-content {
+  margin: 0 auto;
+  width: 60%;
+}
+
+/* Font Size */
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 21px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p,
+th,
+tr,
+li {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgba(47, 79, 79);
+  padding-left: 5px;
+
+  border-left: 7px solid darkslategrey;
+}
+
+body {
+  margin: 0px;
+}
+
+.nav {
+  width: 100%;
+  height: 44px;
+  background-color: #1a1a1d;
+  box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.7);
+}
+
+.title {
+  margin: 0 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Table & Highlight */
+
+.highlight,
+table {
+  padding-top: 5px;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 80%;
+}
+
+th,
+td {
+  padding: 3px;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+
+thead tr {
+  background-color: darkslategray;
+  color: #ffffff;
+}
+tbody tr:nth-child(2n) {
+  background-color: skyblue;
+}
+tbody tr:nth-child(2n + 1) {
+  background-color: #e3f2fd;
+}
