@@ -13,7 +13,9 @@ layout: default
 
 ### I-1. 논문의 아이디어
 
-논문은 Image에서 사용하는 VAE와 IN을 사용하여 Style Transfer에 활용할 수 있다고 하며 One-Shot Voice Conversion을 제시하고 있습니다.
+Utterance에 담긴 정보를 2개의 Encoder를 사용하여 Speaker와 Content 정보로 나누고, Decoder를 사용하여 합치는 Style Transfer 방법을 제시하고 있습니다.
+
+
 
 ### I-2. 모델 설명
 
@@ -21,13 +23,12 @@ layout: default
 <img src="./model2.png" width="40%" style="float:left; margin: 0px 40px 10px 0px; border : 1px solid gray;" alt>
     
 
-
-
-
-모델은 총 4가지의 파트로 구성이 되어 있습니다.
+모델은 총 3개의 파트로 구성이 되어 있습니다.
 
 1. **Speaker Encoder** : 화자 정보를 추출합니다.
-2. **Content Encoder** : Text 정보를 추출합니다.
+
+2. **Content Encoder** : Text 정보를 추출합니다. (Instance Normalization(IN)을 사용하여 Content 정보를 유지하며 Speaker 정보를 제거할 수 있게 만든다고 가정 (TSNE를 활용하여 Clustering을 확인할 수 있지만 미진행))
+
 3. **Decoder** : Content Encoder에서 받은 latent vector를 사용하여 Reconstruction합니다. 이 과정에서 speaker 정보를 Affine transform하여 AdaIN layer에 붙여서 사용합니다.
 
 <br style="clear:both" />
@@ -45,13 +46,23 @@ layout: default
 
 ## III. Preprocessing
 
-전처리에 필요한 hyperparameter는 동일하게 사용하였습니다.
+각 음원에 대한 전처리는 다음과 같이 진행하였습니다.
+
+1. Trimmed out the silence
+2. Normalize the value
+3. Convert the audio to 24kHz
+4. STFT with a 50ms window length, 12.5ms hop length, 2048 STFT window size
+5. 512-bin Mel-scale spectrograms
+
+전체적인 전처리 과정은 다음과 같습니다.
+
 
 - 음성 데이터 전체 리스트 random shuffle
 - train, val, test set으로 분할 (train : val = 19 : 1)
 - 각 리스트의 음원을 mel-spectrogram으로 변환 (박규봉님의 tacotron 내부 코드 사용)
 - normalization을 위해 일정 길이의 데이터에서 평균과 분산값 저장 
 - mel-spectrogram에서 segment size가 128 이하인 음원은 제거
+
 
 ## IV. 기존 논문과 코드 비교
 
@@ -78,27 +89,54 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
 <table>
     <thead>
         <th></th>
-        <th>Male(seen)</th>
-        <th>Femal(seen)</th>
+        <th>wav</th>
+        <th>Male(seen) p246-343</th>
+        <th>Female(seen) p299-241</th>
     </thead>
     <tbody>
         <tr>
-            <th>Male(Seen)</th>
+            <th>wav</th>
             <td></td>
-            <td></td>
+            <td> 
+                <audio controls> <source src='./assets/p246-343.wav' type='audio/x-wav'> </audio>
+            </td>
+            <td>
+                <audio controls> <source src='./assets/p299-241.wav' type='audio/x-wav'> </audio>
+            </td>
         </tr>
         <tr>
-            <th>Female(Seen)</th>
-            <td></td>
-            <td></td>
+            <th>Male(Seen) p292-052</th>
+            <td> 
+                <audio controls> <source src='./assets/p292-052.wav' type='audio/x-wav'> </audio>
+            </td>
+            <td>
+                <audio controls> <source src='./assets/vctk-s2s-m2m.wav' type='audio/x-wav'> </audio>
+            </td>
+            <td>
+                 <audio controls> <source src='./assets/vctk-s2s-f2m.wav' type='audio/x-wav'> </audio>
+            </td>
+        </tr>
+        <tr>
+            <th>Female(Seen)p225-124</th>
+            <td>
+                <audio controls> <source src='./assets/p225-124.wav' type='audio/x-wav'> </audio>
+            </td>
+            <td>
+                <audio controls> <source src='./assets/vctk-s2s-m2f.wav' type='audio/x-wav'> </audio>
+            </td>
+            <td>
+                <audio controls> <source src='./assets/vctk-s2s-f2f.wav' type='audio/x-wav'> </audio>
+            </td>
         </tr>
         <tr>
             <th>Male(Unseen)</th>
             <td></td>
             <td></td>
+            <td></td>
         </tr>
         <tr>
             <th>Female(Unseen)</th>
+            <td></td>
             <td></td>
             <td></td>
         </tr>
@@ -112,7 +150,7 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
     <thead>
         <th></th>
         <th>Male(seen)</th>
-        <th>Femal(seen)</th>
+        <th>Female(seen)</th>
     </thead>
     <tbody>
         <tr>
@@ -146,7 +184,7 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
     <thead>
         <th></th>
         <th>Male(seen)</th>
-        <th>Femal(seen)</th>
+        <th>Female(seen)</th>
     </thead>
     <tbody>
         <tr>

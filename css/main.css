@@ -82,7 +82,7 @@ table {
 }
 
 table {
-  width: 90%;
+  width: 100%;
 }
 
 th,
@@ -111,4 +111,12 @@ figcaption {
   color: lightslategrey;
   font-weight: lighter;
   font-size: 12px;
+}
+
+audio {
+  width: 210px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
 }
