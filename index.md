@@ -66,7 +66,14 @@ Utterance에 담긴 정보를 2개의 Encoder를 사용하여 Speaker와 Content
 
 ### III-2. Training
 
-각 데이터셋에 대하여 train은 약 500,000 iters로 훈련을 돌렸고, 각 Loss값은 다음과 같이 줄어드는 것을 볼 수 있습니다.
+각 데이터셋에 대하여 train은 약 500,000 iters로 훈련을 진행하였고, 각 Loss값은 다음과 같이 줄어드는 것을 볼 수 있습니다.
+*train-clean-360의 Loss값은 Path Error로 누락되었습니다...*
+
+<figure>
+    <img src='./assets/vctk.png' alt />
+    <img src='./assets/libri100.png' alt />
+    <figcaption> (상)VCTK Loss (하) LibriSpeech train-clean-100 Loss </figcaption>
+</figure>
 
 ## IV. 기존 논문과 코드 비교
 
@@ -240,12 +247,12 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
 Mel-Spectrogram에서 보이는 것처럼 높은 주파수의 음역대에서 파형이 모두 흐릿해지는 것을 관찰할 수 있습니다.
 기존 논문의 결과와 $$A\rightarrow A$$ 변환 등 높은 주파수 음역대에서는 비슷하게 흐려지는 결과를 얻을 수 있습니다.
 
-
-
-
-
-또한 duration 정보는 그대로 유지하며 Mel-Spectrogram이 생성됩니다.
-
+<figure class='three'>
+    <img src='./assets/libri100m.png' alt />
+    <img src='./assets/libri100f.png' alt />
+    <img src='./assets/libri100c.png' alt />
+    <figcaption> (상)VCTK Loss (하) LibriSpeech train-clean-100 Loss </figcaption>
+</figure>
 
 
 ## Future Work

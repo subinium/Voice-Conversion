@@ -105,6 +105,11 @@ tbody tr:nth-child(2n + 1) {
 
 figure {
   text-align: center;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
 }
 
 figcaption {
