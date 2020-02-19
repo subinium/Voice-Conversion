@@ -147,24 +147,24 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
     <thead>
         <th></th>
         <th>wav</th>
-        <th>Male(seen) p246-343</th>
-        <th>Female(seen) p299-241</th>
+        <th>Male(seen) </th>
+        <th>Female(seen) </th>
     </thead>
     <tbody>
         <tr>
             <th>wav</th>
             <td></td>
             <td> 
-                <audio controls> <source src='./assets/p246-343.wav' type='audio/x-wav'> </audio>
+                <audio controls> <source src='./assets/8629-261140-0017.flac'> </audio>
             </td>
             <td>
-                <audio controls> <source src='./assets/p299-241.wav' type='audio/x-wav'> </audio>
+                <audio controls> <source src='./assets/6147-34605-0021.flac'> </audio>
             </td>
         </tr>
         <tr>
-            <th>Male(Seen) p292-052</th>
+            <th>Male(Seen) </th>
             <td> 
-                <audio controls> <source src='./assets/p292-052.wav' type='audio/x-wav'> </audio>
+                <audio controls> <source src='./assets/3214-167607-0029.flac'> </audio>
             </td>
             <td>
                 <audio controls> <source src='./assets/libri100-s2s-m2m.wav' type='audio/x-wav'> </audio>
@@ -174,9 +174,9 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
             </td>
         </tr>
         <tr>
-            <th>Female(Seen)p225-124</th>
+            <th>Female(Seen)</th>
             <td>
-                <audio controls> <source src='./assets/p225-124.wav' type='audio/x-wav'> </audio>
+                <audio controls> <source src='./assets/3879-174923-0002.flac'> </audio>
             </td>
             <td>
                 <audio controls> <source src='./assets/libri100-s2s-m2f.wav' type='audio/x-wav'> </audio>
@@ -190,29 +190,28 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
 
 ### V-3. train-clean-360
 
-
 <table>
     <thead>
         <th></th>
         <th>wav</th>
-        <th>Male(seen) p246-343</th>
-        <th>Female(seen) p299-241</th>
+        <th>Male(seen) </th>
+        <th>Female(seen) </th>
     </thead>
     <tbody>
         <tr>
             <th>wav</th>
             <td></td>
             <td> 
-                <audio controls> <source src='./assets/p246-343.wav' type='audio/x-wav'> </audio>
+                <audio controls> <source src='./assets/5672-75791-0006.flac'> </audio>
             </td>
             <td>
-                <audio controls> <source src='./assets/p299-241.wav' type='audio/x-wav'> </audio>
+                <audio controls> <source src='./assets/9023-296467-0001.flac'> </audio>
             </td>
         </tr>
         <tr>
-            <th>Male(Seen) p292-052</th>
+            <th>Male(Seen) </th>
             <td> 
-                <audio controls> <source src='./assets/p292-052.wav' type='audio/x-wav'> </audio>
+                <audio controls> <source src='./assets/7540-101799-0002.flac'> </audio>
             </td>
             <td>
                 <audio controls> <source src='./assets/libri360-s2s-m2m.wav' type='audio/x-wav'> </audio>
@@ -222,9 +221,9 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
             </td>
         </tr>
         <tr>
-            <th>Female(Seen)p225-124</th>
+            <th>Female(Seen)</th>
             <td>
-                <audio controls> <source src='./assets/p225-124.wav' type='audio/x-wav'> </audio>
+                <audio controls> <source src='./assets/4807-26852-0028.flac'> </audio>
             </td>
             <td>
                 <audio controls> <source src='./assets/libri360-s2s-m2f.wav' type='audio/x-wav'> </audio>
