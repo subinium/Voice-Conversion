@@ -251,7 +251,7 @@ Mel-Spectrogram에서 보이는 것처럼 높은 주파수의 음역대에서 �
     <img src='./assets/libri100m.png' alt />
     <img src='./assets/libri100f.png' alt />
     <img src='./assets/libri100c.png' alt />
-    <figcaption> (상)VCTK Loss (하) LibriSpeech train-clean-100 Loss </figcaption>
+    <figcaption> (상)Male Target (중)Female Target (하)Converted </figcaption>
 </figure>
 
 
@@ -259,4 +259,4 @@ Mel-Spectrogram에서 보이는 것처럼 높은 주파수의 음역대에서 �
 
 - dropout과 log sigma 값 등의 hyperparameter 조정을 할 수 있음
   - 저자가 이미 testing 해서 나온 결론으로 보여짐
-- Content Encoder 대신에 Text로 전달하여 STS가 아닌 TTS로 구성
+- Content Encoder 대신에 Text로 전달하여 STS가 아닌 TTS로 구성 // 다른 모델의 사용
