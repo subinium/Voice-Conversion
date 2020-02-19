@@ -176,7 +176,7 @@ Github에 Pre-Trained된 모델을 공개하여, 같은 방법으로 전처리 �
         <tr>
             <th>Female(Seen)</th>
             <td>
-                <audio preload="auto" controls> <source src='./assets/3879-174923-0002.flac'> </audio>
+                <audio controls> <source src='./assets/3879-174923-0002.flac'> </audio>
             </td>
             <td>
                 <audio preload="auto" controls> <source src='https://raw.githubusercontent.com/subinium/Voice-Conversion/master/assets/libri100-s2s-m2f.wav' type='audio/x-wav'> </audio>
